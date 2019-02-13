@@ -59,8 +59,8 @@ WORKDIR $INSTALL_PATH
 #COPY Gemfile* ./$INSTALL_PATH
 #COPY ./Gemfile $INSTALL_PATH/Gemfile
 #COPY ./Gemfile.lock $INSTALL_PATH/Gemfile.lock
-COPY Gemfile Gemfile.lock ./
-
+COPY Gemfile ./
+#Gemfile.lock deleted
 RUN bundle install
 
 # Copy in the application code from your work station at the current directory
