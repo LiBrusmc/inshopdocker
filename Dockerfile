@@ -6,7 +6,10 @@ RUN bundle config --global frozen 1
 WORKDIR /usr/src/app
 
 COPY Gemfile Gemfile.lock ./
-RUN gem update --system gem install bundler bundler update --bundler bundle install
+RUN gem update --system \
+gem install bundler \
+bundler update --bundler \
+bundle install
 
 COPY . .
 
